@@ -1,12 +1,5 @@
 package ru.practicum.storage;
 
-import ru.practicum.EndpointHit;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-
 public class StorageSqlConstants {
     public static final String INSERT_STATISTICS_SQL = "INSERT INTO statistics (application, uri, ip, timestamp)" +
             " VALUES (:app, :uri, :ip, :timestamp)";
