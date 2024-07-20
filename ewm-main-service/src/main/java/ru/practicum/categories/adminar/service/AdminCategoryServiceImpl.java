@@ -10,7 +10,6 @@ import ru.practicum.categories.model.Category;
 import ru.practicum.categories.repository.CategoryRepository;
 import ru.practicum.utils.GeneralMethods;
 
-import javax.transaction.Transactional;
 import java.util.Objects;
 
 @Service
@@ -19,7 +18,6 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
     private final CategoryRepository categoryRepository;
     private final CategoryMapper categoryMapper;
 
-    @Transactional
     @Override
     public CategoryDto save(NewCategoryDto newCategoryDto) {
         try {

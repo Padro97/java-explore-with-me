@@ -9,7 +9,6 @@ import ru.practicum.categories.dto.CategoryDto;
 import ru.practicum.categories.dto.NewCategoryDto;
 import ru.practicum.utils.PathConstants;
 
-import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 @RestController
@@ -19,7 +18,6 @@ import javax.validation.Valid;
 public class AdminCategoryController {
     private final AdminCategoryService adminCategoryService;
 
-    @Transactional
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public CategoryDto save(@Valid @RequestBody NewCategoryDto newCategoryDto) {

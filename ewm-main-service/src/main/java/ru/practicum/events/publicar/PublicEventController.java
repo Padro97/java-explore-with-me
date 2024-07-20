@@ -41,7 +41,7 @@ public class PublicEventController {
 
     @GetMapping(PathConstants.LOCATIONS)
     public List<EventShortDto> getByLocation(@Valid GetEventByLocationRequest getEventRequest,
-                                             @Valid PageParams pageParams) {
+                                              @Valid PageParams pageParams) {
         return publicEventService.getByLocation(getEventRequest, pageParams);
     }
 }
