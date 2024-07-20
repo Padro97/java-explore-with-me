@@ -10,8 +10,10 @@ import ru.practicum.categories.model.Category;
 import ru.practicum.categories.repository.CategoryRepository;
 import ru.practicum.utils.GeneralMethods;
 
+import javax.transaction.Transactional;
 import java.util.Objects;
 
+@Transactional
 @Service
 @RequiredArgsConstructor
 public class AdminCategoryServiceImpl implements AdminCategoryService {
