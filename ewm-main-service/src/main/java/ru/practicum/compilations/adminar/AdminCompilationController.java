@@ -10,6 +10,7 @@ import ru.practicum.compilations.dto.NewCompilationDto;
 import ru.practicum.compilations.dto.UpdateCompilationDto;
 import ru.practicum.utils.PathConstants;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 @RestController
@@ -19,6 +20,7 @@ import javax.validation.Valid;
 public class AdminCompilationController {
     private final AdminCompilationService adminCompilationService;
 
+    @Transactional
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public CompilationDto save(@Valid @RequestBody NewCompilationDto newCompilationDto) {
